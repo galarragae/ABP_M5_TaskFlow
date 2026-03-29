@@ -34,17 +34,20 @@
   </header>
 
   <main class="container my-4">
+
+    <div id="alert-container"></div>
+
     <section class="mb-4">
-      <form class="border rounded-3 p-4 " id="formulario-tarea">
+      <form class="border rounded-3 p-4" id="task-form">
 
         <div class="mb-3">
-          <label class="form-label" for="descripcion">Descripción</label>
-          <input type="text" class="form-control" id="descripcion" name="descripcion">
+          <label class="form-label" for="task-description">Descripción</label>
+          <input type="text" class="form-control" id="task-description" name="task-description" placeholder="Ejemplo: Comprar pan" required>
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="fecha-limite">Fecha límite</label>
-          <input type="datetime-local" class="form-control" id="fecha-limite" name="fecha-limite">
+          <label class="form-label" for="due-date">Fecha límite</label>
+          <input type="datetime-local" class="form-control" id="due-date" name="due-date" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Agregar tarea</button>
@@ -54,7 +57,7 @@
 
     <section class="mb-4">
       <h2>Tareas</h2>
-      <ul class="list-group" id="lista-tareas"></ul>
+      <ul class="list-group" id="tasks-list"></ul>
     </section>
   </main>
 
