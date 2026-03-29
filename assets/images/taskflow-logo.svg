@@ -1,0 +1,30 @@
+<svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" width="2000" height="2000">
+  <!-- Background: transparent (no fill needed) -->
+  
+  <!-- Main geometric shape - flowing circle segments -->
+  <defs>
+    <style>
+      .primary { fill: none; stroke: #8C8A36; stroke-width: 140; stroke-linecap: round; stroke-linejoin: round; }
+      .accent { fill: none; stroke: #FF8214; stroke-width: 140; stroke-linecap: round; stroke-linejoin: round; }
+      .accent-solid { fill: #FF8214; }
+    </style>
+  </defs>
+  
+  <!-- Left flowing arc -->
+  <path class="primary" d="M 400 1000 A 600 600 0 0 1 1000 400" />
+  
+  <!-- Right flowing arc -->
+  <path class="accent" d="M 1000 400 A 600 600 0 0 1 1600 1000" />
+  
+  <!-- Bottom flowing arc -->
+  <path class="primary" d="M 1600 1000 A 600 600 0 0 1 1000 1600" />
+  
+  <!-- Checkmark accent in center -->
+  <g transform="translate(1000, 1000)">
+    <!-- Check mark circle background -->
+    <circle cx="0" cy="0" r="320" class="accent-solid" opacity="0.1"/>
+    
+    <!-- Check mark -->
+    <path class="accent" d="M -180 0 L -50 130 L 200 -100" />
+  </g>
+</svg>
