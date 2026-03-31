@@ -3,9 +3,9 @@ const tasksList = document.getElementById("tasks-list");
 
 // 1. Crear clase tarea (Task)
 class Task {
-  constructor(id, taskDescription, status, creationDate, dueDate) {
+  constructor(id, description, status, creationDate, dueDate) {
     this.id = id; // número o string
-    this.taskDescription = taskDescription; // string (input)
+    this.description = description; // string (input)
     this.status = status; // boolean
     this.creationDate = creationDate; // string
     this.dueDate = dueDate;
@@ -115,8 +115,8 @@ const tasksListRendering = () => {
     span.classList.add("date-countdown", "small", "text-muted");
     span.textContent = countdownTimer(task.dueDate);
 
-    const { taskDescription, status } = task;
-    li.textContent = `${taskDescription} ---> ${status ? "Completada" : "Pendiente"}`;
+    const { description, status } = task;
+    li.textContent = `${description} ---> ${status ? "Completada" : "Pendiente"}`;
 
     // Botones para eliminar y cambiar estado de una tarea
     const deleteButton = document.createElement("button");
@@ -174,12 +174,12 @@ taskForm.addEventListener("submit", (event) => {
   // Simular un retraso al agregar tarea
 
   setTimeout(() => {
-    const taskDescription = document.getElementById("task-description").value;
+    const description = document.getElementById("task-description").value;
     const dueDate = document.getElementById("due-date").value;
     const deadline = dueDate ? new Date(dueDate).getTime() : undefined; // new Date().getTime() devuelve los milisegundos desde 01/01/1970
     const newTask = new Task(
       Date.now(), // id
-      taskDescription, // taskDescription
+      description, // description
       false, // status
       new Date().toLocaleDateString("es-CL"), // creationDate
       deadline, // dueDate

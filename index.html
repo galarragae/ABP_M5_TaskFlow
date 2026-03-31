@@ -38,23 +38,21 @@
     <div id="alert-container"></div>
 
     <section class="mb-4">
+      <!-- FORM para agregar tarea -->
       <form class="border rounded-3 p-4" id="task-form">
-
         <div class="mb-3">
           <label class="form-label" for="task-description">Descripción</label>
           <input type="text" class="form-control" id="task-description" name="task-description" placeholder="Ejemplo: Comprar pan" required>
         </div>
-
         <div class="mb-3">
           <label class="form-label" for="due-date">Fecha límite</label>
           <input type="datetime-local" class="form-control" id="due-date" name="due-date" required>
         </div>
-
         <button type="submit" class="btn btn-primary">Agregar tarea</button>
-
       </form>
     </section>
 
+    <!-- Lista de Tareas agregadas dinámicamente -->
     <section class="mb-4">
       <h2>Tareas</h2>
       <ul class="list-group" id="tasks-list"></ul>
