@@ -1,63 +1,10 @@
+// Importar las clases modularizadas
+import Task from "./classes/Task.js";
+import TaskManager from "./classes/TaskManager.js";
+import { success, error, options } from "./APIs/geolocation.js";
+
 const taskForm = document.getElementById("task-form");
 const tasksList = document.getElementById("tasks-list");
-
-// 1. Crear clase tarea (Task)
-class Task {
-  constructor(id, description, status, creationDate, dueDate) {
-    this.id = id; // número o string
-    this.description = description; // string (input)
-    this.status = status; // boolean
-    this.creationDate = creationDate; // string
-    this.dueDate = dueDate;
-  }
-
-  changeStatus() {
-    this.status = !this.status; // automáticamente será false
-  }
-}
-
-// 2. Crear clase gestor de tareas (TaskManager)
-class TaskManager {
-  #tasks = [];
-
-  // -------- Agregar una tarea --------
-  addTask(task) {
-    this.#tasks.push(task);
-  }
-
-  // -------- Eliminar una tarea --------
-  deleteTask(id) {
-    let foundTask = this.#findTask(id);
-    if (!foundTask) {
-      console.log("Task not found");
-      return; // Salimos de la función y no hace nada más
-    }
-
-    this.#tasks = this.#tasks.filter((task) => task.id !== id);
-  }
-
-  // -------- Encontrar una tarea -------
-  #findTask(id) {
-    return this.#tasks.find((task) => task.id === id);
-  }
-
-  // -------- Cambiar es estado de una tarea --------
-  changeStatus(id) {
-    let foundTask = this.#findTask(id);
-    if (!foundTask) {
-      console.log("Task not found");
-      return; // Salimos de la función y no hace nada más
-    }
-
-    // Si encontró la tarea:
-    foundTask.changeStatus();
-  }
-
-  // -------- Mostrar lista de tareas --------
-  showTasksList() {
-    return this.#tasks;
-  }
-}
 
 // Instanciar las clases
 const taskManager = new TaskManager();
@@ -73,8 +20,6 @@ const insertAlert = (className, message) => {
 
   document.getElementById("alert-container").innerHTML = alert;
 };
-
-// ===============================================================
 
 // Contador regresivo
 
@@ -104,7 +49,7 @@ const tasksListRendering = () => {
     li.classList.add(
       "list-group-item",
       "d-flex",
-      "justify-conten-center",
+      "justify-content-between",
       "align-items-center",
     );
 
@@ -165,14 +110,12 @@ taskForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // Insertar la alerta para que el usuario sepa que se está agregando la tarea
-
   insertAlert(
     "warning",
     "<strong>Agregando tarea a la lista</strong>, por favor espere...",
   );
 
   // Simular un retraso al agregar tarea
-
   setTimeout(() => {
     const description = document.getElementById("task-description").value;
     const dueDate = document.getElementById("due-date").value;
@@ -215,3 +158,6 @@ tasksList.addEventListener("click", (event) => {
     tasksListRendering();
   }
 });
+
+// Geolocation API (del navegador)
+navigator.geolocation.getCurrentPosition(success, error, options);
