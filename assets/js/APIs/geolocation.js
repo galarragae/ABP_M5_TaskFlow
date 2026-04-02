@@ -1,4 +1,4 @@
-import { getWeather } from "./APIs/weather.js";
+import { getWeather } from "./weather.js";
 
 // Geolocation API ==> (API del navegador para obtener los datos de dónde está ubicado el usuario geográficamente)
 const options = {
