@@ -15,11 +15,12 @@ export const getWeather = async (latitude, longitude) => {
     const apisBar = document.getElementById("apis-bar");
 
     const weather = `
-    <navbar class="d-flex row justify-content-center bg-dark text-white">
-    <div class="col-md-4 mx-auto mt-3">
-      <p><img class="align-items-center" src="${data.current.condition.icon}" width="50px"/>Clima actual: ${data.current.temp_c}°C | ${data.current.temp_f}°F | Humedad: ${data.current.humidity}%</p>
+    <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+      <p class="my-1 small">
+        <img src="${data.current.condition.icon}" width="50px"/>
+        Clima actual: ${data.current.temp_c}°C | ${data.current.temp_f}°F | Humedad: ${data.current.humidity}%
+      </p>
     </div>
-    </navbar>
     `;
 
     apisBar.innerHTML = weather;

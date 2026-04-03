@@ -24,28 +24,49 @@
 
 <body>
   <header>
-    <!-- <nav class="navbar bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/images/taskflow-logo.svg" alt="TaskFlow logo" width="100vh"> TaskFlow
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container-fluid px-4 d-flex justify-content-between">
+        <!-- Logo + texto -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./assets/images/taskflow-logo.svg" alt="TaskFlow logo" width="50">
+          <span class="ms-2">TaskFlow</span>
         </a>
+
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+          aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links alineados a la derecha -->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          </ul>
+        </div>
       </div>
-    </nav> -->
+    </nav>
 
     <!-- Arreglar APIs bar: Clima | Fecha & Hora | Dólar al cambio de hoy -->
-    <div id="apis-bar"></div>
+    <section id="apis-bar" class="container-fluid d-none d-md-flex justify-content-center align-items-center bg-secondary-subtle">
+      <div class="row w-100 justify-content-center align-items-center"></div>
+    </section>
+
   </header>
 
-  <main class="container my-4">
+  <main class="container-fluid p-4">
 
     <div id="alert-container"></div>
 
     <section class="mb-4">
       <!-- FORM para agregar tarea -->
+      <h2 class="mb-4">Agregar tarea</h2>
       <form class="border rounded-3 p-4" id="task-form">
         <div class="mb-3">
           <label class="form-label" for="task-description">Descripción</label>
-          <input type="text" class="form-control" id="task-description" name="task-description" placeholder="Ejemplo: Comprar pan" required>
+          <input type="text" class="form-control" id="task-description" name="task-description"
+            placeholder="Ejemplo: Comprar pan" required>
         </div>
         <div class="mb-3">
           <label class="form-label" for="due-date">Fecha límite</label>
@@ -56,9 +77,9 @@
     </section>
 
     <!-- Lista de Tareas agregadas dinámicamente -->
-    <section class="mb-4">
-      <h2>Tareas</h2>
-      <ul class="list-group" id="tasks-list"></ul>
+    <section class="mt-5">
+      <h2 class="mb-4">Tareas</h2>
+      <ul class="list-group border rounded-3 p-4" id="tasks-list"></ul>
     </section>
   </main>
 
