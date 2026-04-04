@@ -4,7 +4,8 @@
 
 Permite crear, visualizar y marcar tareas como completadas de manera sencilla por el usuario. También permite ver el clima actual en la barra superior bajo la barra de navegadión.
 
-### Características
+
+## Características
 
 Esta aplicación permite al usuario:
 
@@ -16,14 +17,16 @@ Esta aplicación permite al usuario:
 - Ver el tiempo faltante (conteo regresivo) para completar cada tarea
 - Ver el clima actual al momento de usarla (temperatura en °C, °F y humedad)
 
-### Tecnologías utilizadas
+
+## Tecnologías utilizadas
 
 - **HTML5** → Estructura de la interfaz
 - **JavaScript (ES6)** → lógica y manipulación del DOM
 - **pnpm** → gestor de dependencias
 - **Bootstrap** → estilos
 
-### Estructura del proyecto
+
+## Estructura del proyecto
 
 TaskFlow/
 
@@ -39,7 +42,8 @@ TaskFlow/
 
 │── node_modules/  → Librerías instaladas
 
-### Instalación y uso
+
+## Instalación y uso
 
 1. Abre tu editor de código (como VSCode, por ejemplo) y ejecuta los siguientes comandos en la terminal:
    1. Clonar el repositorio:
@@ -50,9 +54,11 @@ TaskFlow/
       pnpm install
 2. Abre el proyecto en el navegador y comienza a agregar tareas, cambiar el estado de las mismas o eliminarlas.
 
-### ¿Qué encontrarás en este proyecto?
 
-#### 1. Orientación a Objetos en JavaScript
+## ¿Qué encontrarás en este proyecto?
+
+
+### 1. Orientación a Objetos en JavaScript
 
 En esta primera parte, se utiliza la POO para estructurar el proyecto y se definen dos clases principales:
 
@@ -76,7 +82,8 @@ En esta primera parte, se utiliza la POO para estructurar el proyecto y se defin
     - showTaskList (renderizar la lista de tareas)
     - saveTask (actualiza la lista de tareas en local storage)
 
-#### 2. Uso de ES6+
+
+### 2. Uso de ES6+
 
 Este código código utiliza varias características modernas de JavaScript:
 
@@ -85,7 +92,8 @@ Este código código utiliza varias características modernas de JavaScript:
 - Arrow functions en los manejadores de eventos.
 - Uso de JSON.stringify y JSON.parse para manipular datos en localStorage.
 
-#### 3. Eventos y Manipulación del DOM
+
+### 3. Eventos y Manipulación del DOM
 
 La aplicación responde a la interacción del usuario:
 
@@ -94,14 +102,16 @@ La aplicación responde a la interacción del usuario:
 - Función showTasks() que reconstruye dinámicamente la lista en el DOM.
 - Botones individuales para cada acción sobre las tareas.
 
-#### 4. Asincronía
+
+### 4. Asincronía
 
 Se ha implementado asincronía con:
 
 - setTimeout() → muestra un alert simulando retardo al agregar una tarea.
 - setInterval() → actualiza el conteo regresivo desde el momento actual hasta la fecha límite de cada tarea cada 1 segundo.
 
-#### 5. Consumo de APIs
+
+### 5. Consumo de APIs
 
 Se integra el consumo de una API externa:
 
