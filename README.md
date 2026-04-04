@@ -27,17 +27,17 @@ Esta aplicación permite al usuario:
 
 TaskFlow/
 
-│── index.html # Página principal
+│── index.html  → Página principal
 
-│── assets/ # Recursos gráficos y estilos
+│── assets/  → Recursos gráficos y estilos
 
-│── docs/ # Documentación adicional
+│── docs/  → Documentación adicional
 
-│── package.json # Dependencias y scripts
+│── package.json  → Dependencias y scripts
 
-│── pnpm-lock.yaml # Bloqueo de versiones
+│── pnpm-lock.yaml  → Bloqueo de versiones
 
-│── node_modules/ # Librerías instaladas
+│── node_modules/  → Librerías instaladas
 
 ### Instalación y uso
 
