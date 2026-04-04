@@ -1,6 +1,7 @@
 # TaskFlow: Gestor de tareas
 
 **TaskFlow** es una aplicación web para la gestión de tareas, desarrollada como parte del Bootcamp de Desarrollo de Aplicaciones Front-End Trainee RTD-25-01-05-0011-1 de SENCE.
+
 Permite crear, visualizar y marcar tareas como completadas de manera sencilla por el usuario. También permite ver el clima actual en la barra superior bajo la barra de navegadión.
 
 ### Características
@@ -26,10 +27,15 @@ Esta aplicación permite al usuario:
 
 TaskFlow/
 │── index.html # Página principal
+
 │── assets/ # Recursos gráficos y estilos
+
 │── docs/ # Documentación adicional
+
 │── package.json # Dependencias y scripts
+
 │── pnpm-lock.yaml # Bloqueo de versiones
+
 │── node_modules/ # Librerías instaladas
 
 ### Instalación y uso
