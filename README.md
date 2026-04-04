@@ -26,6 +26,7 @@ Esta aplicación permite al usuario:
 ### Estructura del proyecto
 
 TaskFlow/
+
 │── index.html # Página principal
 
 │── assets/ # Recursos gráficos y estilos
