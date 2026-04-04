@@ -43,8 +43,10 @@ TaskFlow/
 
 1. Abre tu editor de código (como VSCode, por ejemplo) y ejecuta los siguientes comandos en la terminal:
    1. Clonar el repositorio:
+
       git clone https://github.com/galarragae/ABP_M5_TaskFlow.git
-   2. Instalar dependencias:
+   3. Instalar dependencias:
+
       pnpm install
 2. Abre el proyecto en el navegador y comienza a agregar tareas, cambiar el estado de las mismas o eliminarlas.
 
